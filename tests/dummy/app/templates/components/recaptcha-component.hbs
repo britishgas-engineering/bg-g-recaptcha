@@ -1,0 +1,4 @@
+{{#if processRecaptcha}}
+  {{bg-g-recaptcha onSuccess=(action "onCaptchaResolved")}}
+{{/if}}
+<h3><button {{action "toggleBody"}}>VALIDATE RECAPTCHA</button></h3>
