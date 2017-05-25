@@ -39,10 +39,10 @@ export default Ember.Component.extend({
   didInsertElement() {
     this._super(...arguments);
     Ember.run.next(() => {
-      if (this.get('isTestEnvironment')) {
-        this.sendAction('onSuccess')
-      } else {
+      if (this.get('enableRecaptcha')) {
         this.renderReCaptcha();
+      } else {
+        this.sendAction('onSuccess');
       }
     });
   }
