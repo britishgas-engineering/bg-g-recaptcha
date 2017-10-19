@@ -5,7 +5,7 @@ export default {
 
   name: 'bg-g-recaptcha',
 
-  initialize: function(registry) {
+  initialize: function() {
     const config = ENV.gReCaptcha || {};
     Configuration.setProperties(config);
   }
